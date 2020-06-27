@@ -1,0 +1,19 @@
+{
+  "name": "coursera_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7VIVANN/coursera_web.git"
+  },
+  "author": "7vivann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7VIVANN/coursera_web/issues"
+  },
+  "homepage": "https://github.com/7VIVANN/coursera_web#readme"
+}
