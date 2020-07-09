@@ -31,7 +31,12 @@ body{
 }
 .bg-yellow{
 	background-color: #c4b729;
-
+}
+.bg-green{
+	background-color: green;
+}
+.bg-red{
+	background-color: red;
 }
 #jumbotron-reserve{
 	background-color: #c49b29;
