@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width , scale=initial-scale">
     <title>Ristorante Con Fusion: About Us</title>
 
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
     <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-social/bootstrap-social.css">
-
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- endbuild -->
 
 </head>
 
@@ -31,7 +31,7 @@
                     <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span>  Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                    <a id="loginModalTrigger">
                         <span class="fa fa-sign-in"></span> login
                     </a>
                 </span>
@@ -44,7 +44,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title"> Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close loginModalSilencer" >
                         &times;
                     </button>
                 </div>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button class="btn btn-secondary btn-sm ml-auto" type="button" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-secondary btn-sm ml-auto loginModalSilencer" type="button" >Cancel</button>
                             <button class="btn btn-primary btn-sm ml-1">Sign-In</button>
                         </div>
                     </form>
@@ -80,7 +80,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title"> Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close reservationModalSilencer" >
                         &times;
                     </button>
                 </div>
@@ -141,11 +141,11 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-8 offset-md-2">
-                                    <button id="submit" type="btn"
-                                 class="btn btn-primary">Reserve</button>
-                                     <button type="button" class=" btn btn-secondary" data-dismiss="modal">
+                                     <button type="button" class=" btn btn-secondary reservationModalSilencer" >
                                         Cancel
                                     </button>
+                                    <button id="submit" type="btn"
+                                 class="btn btn-primary">Reserve</button>
                                 </div>
                             </div>
                         </form>
@@ -166,7 +166,7 @@
                         <img src="img/logo.png" class="img-fluid">
                         </div>
                         <div class="col-12 col-sm align-self-center justify-content-center pull-right">
-                            <a id="jumbotron-reserve" type="button" href="" class="btn btn-block btn-sm btn-warning  text-dark" data-toggle="modal" data-target="#reservationModal">Reserve Table</a>
+                            <a id="reservationModalTrigger" type="button" href="" class="btn btn-block btn-sm btn-warning  text-dark" data-toggle="modal" data-target="#reservationModal">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -268,27 +268,12 @@
                 </div>
            </div>
         </div>
+    <!-- build:js js/main.js -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script type="text/javascript" src="node_modules/popper.js/dist/umd/popper.min.js"></script>   
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#myCarousel").carousel( { interval: 2000 } );
-            $('#carouselButton').click(function(){
-              if($('#carouselButton').children('span').hasClass('fa-pause')){
-                $('#myCarousel').carousel('pause');
-                $('#carouselButton').children('span').removeClass('fa-pause');
-                $('#carouselButton').children('span').addClass('fa-play');
-
-              }
-              else if ($('#carouselButton').children('span').hasClass('fa-play')) {
-                $('#myCarousel').carousel('cycle');
-                $('#carouselButton').children('span').removeClass('fa-play');
-                $('#carouselButton').children('span').addClass('fa-pause');
-              }
-            });
-        });
-    </script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- endbuild -->
 </footer>
 
 </html>
